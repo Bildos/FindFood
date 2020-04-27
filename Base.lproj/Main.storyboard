@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lKd-fB-8ob">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Информация о продукте-->
+        <scene sceneID="TH9-om-ksU">
+            <objects>
+                <viewController id="xh6-cA-DSO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AyF-kh-3gs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D6x-DL-DtS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Информация о продукте" selectedImage="info" catalog="system" id="b9S-06-z9A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBb-bQ-HjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="586"/>
+        </scene>
+        <!--Сканер-->
+        <scene sceneID="KbS-lV-GfE">
+            <objects>
+                <viewController id="iMY-6a-IMZ" customClass="ViewController" customModule="FindFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxm-86-DeI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eSn-ta-iS7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Сканер" selectedImage="barcode" id="Igc-fZ-k3T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="by1-3h-0Kv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="-71"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="q0W-tp-TBY">
+            <objects>
+                <tabBarController id="lKd-fB-8ob" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qc5-bh-QoH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iMY-6a-IMZ" kind="relationship" relationship="viewControllers" id="wBr-Ga-xXU"/>
+                        <segue destination="xh6-cA-DSO" kind="relationship" relationship="viewControllers" id="S8Z-e6-YVM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inn-2J-f2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="259"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barcode" width="25" height="25"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+    </resources>
+</document>
